@@ -1,12 +1,17 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Test from "./components/Test";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-       This is the new app
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Test} />
+        </Switch>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
